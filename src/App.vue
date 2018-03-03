@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import "bulma/css/bulma.css";
+import "normalize.css";
+
 export default {
   name: "App"
 };
@@ -18,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Bangers', cursive;
-  font-size: 30px;
 }
 
 header {
@@ -39,6 +39,10 @@ header {
     border-bottom: solid 5px;
     box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
   }
+
+  h1 {
+    margin: 5px;
+  }
 }
 
 footer {
@@ -57,7 +61,6 @@ footer {
   .copyright {
     text-align: center;
     flex: 1 0 auto;
-    font-size: 0.5em;
   }
 }
 
