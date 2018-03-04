@@ -1,35 +1,33 @@
 <template>
   <main>
-    <section class="superhero-card">
-      <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg" alt="A-Bomb (HAS)" class="superhero-card__logo">
-      <div class="superhero-card__detail">
-        <h2 class="superhero-card__title">A-Bomb (HAS)</h2>
-        <div class="superhero-card__description">Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction! </div>
-      </div>
-    </section>
-    <section class="superhero-card">
-      <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec.jpg" alt="A.I.M." class="superhero-card__logo">
-      <div class="superhero-card__detail">
-        <h2 class="superhero-card__title">A.I.M.</h2>
-        <div class="superhero-card__description">AIM is a terrorist organization bent on destroying the world.</div>
-      </div>
-    </section>
-    <section class="superhero-card">
-      <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg" alt="A-Bomb (HAS)" class="superhero-card__logo">
-      <div class="superhero-card__detail">
-        <h2 class="superhero-card__title">A-Bomb (HAS)</h2>
-        <div class="superhero-card__description">Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction! </div>
-      </div>
-    </section>
+    <SuperheroCard :superhero="superhero" v-for="(superhero, idx) in heroes" :key="idx" />
   </main>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import SuperheroCard from "./components/SuperheroCard.vue";
+import SuperHero from "./entities/SuperHero";
+
 import "normalize.css";
 
-export default {
-  name: "App"
-};
+@Component({
+  components: { SuperheroCard }
+})
+export default class App extends Vue {
+  heroes: Array<SuperHero> = [
+    new SuperHero(
+      "A-Bomb (HAS)",
+      "Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction!",
+      "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
+    ),
+    new SuperHero(
+      "A.I.M.",
+      "AIM is a terrorist organization bent on destroying the world.",
+      "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec.jpg"
+    )
+  ];
+}
 </script>
 
 <style lang="stylus">
