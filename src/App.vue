@@ -120,4 +120,15 @@ main {
     flex: 1 1 auto;
   }
 }
+
+.search-link {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
 </style>

@@ -4,6 +4,9 @@
       <input type="text" class="search-superhero" role="searchbox" placeholder="Search for hero" :value="searchValue" @input="updateSearchValue">
     </div>
     <SuperheroCard :superhero="superhero" v-for="(superhero, idx) in heroes" :key="idx" />
+    <router-link to="/infos" class="search-link">
+      <img src="../assets/SHIELD.png" alt="">
+    </router-link>
   </main>
 </template>
 <script lang="ts">
@@ -32,6 +35,10 @@ export default class App extends Vue {
   @Watch("searchValue")
   async fetchData() {
     this.heroes = await getCharacters(this.searchValue);
+  }
+
+  mounted() {
+    this.fetchData();
   }
 }
 </script>

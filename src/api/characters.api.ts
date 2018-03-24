@@ -1,7 +1,9 @@
 import SuperHero from "@/entities/SuperHero";
 import axios from "axios";
+import Infos from "@/entities/Infos";
 
 const CHARACTERS_URL = "/api/characters";
+const INFO_URL = "/api/info";
 
 export function getCharacters(search: string): Promise<Array<SuperHero>> {
   return axios
@@ -21,4 +23,8 @@ export function getCharacters(search: string): Promise<Array<SuperHero>> {
       }
       console.error(error.response);
     });
+}
+
+export function getInfos(): Promise<Infos> {
+  return axios.get(INFO_URL).then(response => new Infos(response.data));
 }
