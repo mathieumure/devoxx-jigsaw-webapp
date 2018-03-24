@@ -39,5 +39,6 @@ export default class App extends Vue {
 .search-superhero {
   flex: 1 1 auto;
   text-align: center;
+  font-size: 1.5em;
 }
 </style>

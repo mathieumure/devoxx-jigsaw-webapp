@@ -54,6 +54,15 @@ footer {
   align-items: center;
   border-top: solid 5px;
 
+  // mobile
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .copyright {
+      order: -1;
+    }
+  }
+
   img {
     height: 25px;
   }
@@ -77,6 +86,21 @@ main {
   border: solid 5px;
   box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
+  flex-direction: row;
+
+  // Tablet
+  @media screen and (max-width: 1024px) {
+    width: 75%;
+  }
+
+  // mobile
+  @media screen and (max-width: 768px) {
+    flex-direction: column !important;
+
+    &__logo {
+      max-width: 195px;
+    }
+  }
 
   &:nth-child(even) {
     transform: skewX(5deg);
