@@ -25,6 +25,13 @@ export function getCharacters(search: string): Promise<Array<SuperHero>> {
     });
 }
 
+export function getCharacter(id: number): Promise<SuperHero> {
+  return axios
+    .get(CHARACTERS_URL + "/" + id)
+    .then(response => response.data)
+    .then((it: any) => new SuperHero(it.id, it.name, it.description));
+}
+
 export function getInfos(): Promise<Infos> {
   return axios.get(INFO_URL).then(response => new Infos(response.data));
 }
