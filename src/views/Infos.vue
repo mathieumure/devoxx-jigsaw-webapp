@@ -29,7 +29,7 @@ import "normalize.css";
 
 @Component
 export default class App extends Vue {
-  info: Infos? = null;
+  info: Infos | null = null;
   async mounted() {
     this.info = await getInfos();
   }

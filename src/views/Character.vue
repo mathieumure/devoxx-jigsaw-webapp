@@ -18,7 +18,7 @@ import "normalize.css";
   components: { SuperheroCard }
 })
 export default class App extends Vue {
-  hero: SuperHero? = null;
+  hero: SuperHero | null = null;
   @Prop({ required: true })
   id!: string;
 
@@ -29,8 +29,8 @@ export default class App extends Vue {
 </script>
 <style lang="stylus">
 .search-superhero {
-    flex: 1 1 auto;
-    text-align: center;
-    font-size: 1.5em;
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 1.5em;
 }
 </style>

@@ -15,8 +15,8 @@ import SuperHero from "../entities/SuperHero";
 export default class SuperheroCard extends Vue {
   @Prop({ required: true })
   superhero!: SuperHero;
-  goToDetail () {
-    this.$router.push('/characters/' + this.superhero.id)
+  goToDetail() {
+    this.$router.push("/characters/" + this.superhero.id);
   }
 }
 </script>

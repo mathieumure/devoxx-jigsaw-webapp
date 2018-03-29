@@ -9,6 +9,6 @@ module.exports = {
       }
     }
   },
-  baseUrl: "/devoxx-jigsaw-webapp/",
+  baseUrl: "/",
   outputDir: "docs"
 };
