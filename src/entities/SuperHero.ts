@@ -8,6 +8,6 @@ export default class SuperHero {
     this.id = id;
     this.name = name;
     this.description = description;
-    this.logo = "/api/images/" + this.id;
+    this.logo = "/api/images/" + this.id + "?type=standard";
   }
 }
