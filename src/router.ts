@@ -11,6 +11,6 @@ export default new Router({
     { path: "/characters", component: Characters },
     { path: "/characters/:id", component: Character, props: true },
     { path: "/infos", component: Infos },
-    { path: "", redirect: "/characters" }
+    { path: "*", redirect: "/characters" }
   ]
 });
