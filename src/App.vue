@@ -14,7 +14,7 @@ export default class App extends Vue {}
 body {
   background: url('/cover.jpg') fixed;
   background-size: 100vw 774px;
-  min-width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   min-height: 100vh;
   display: flex;
   flex-direction: column;

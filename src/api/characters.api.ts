@@ -5,11 +5,12 @@ import Infos from "@/entities/Infos";
 const CHARACTERS_URL = "/api/characters";
 const INFO_URL = "/api/info";
 
-export function getCharacters(search: string): Promise<Array<SuperHero>> {
+export function getCharacters(search: string, score?: number): Promise<Array<SuperHero>> {
   return axios
     .get(CHARACTERS_URL, {
       params: {
-        search
+        search,
+        score
       }
     })
     .then(response =>
