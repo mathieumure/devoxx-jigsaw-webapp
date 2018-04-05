@@ -29,7 +29,7 @@ import "vue-range-slider/dist/vue-range-slider.css";
 })
 export default class App extends Vue {
   heroes: Array<SuperHero> = [];
-  score: number = 100;
+  score: number = 90;
   showDetail: boolean = false;
 
   get searchValue(): string {
