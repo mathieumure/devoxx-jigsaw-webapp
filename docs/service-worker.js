@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.0-beta.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ac861e6a82bcb76b85fee4a06332212c.js"
+  "/precache-manifest.ce997c44437816357d726c9aeec1ea3a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "devoxx-jigsaw-webapp"});

@@ -8,7 +8,7 @@
         <div class="superhero-card__description"><span class="title">JAVA VENDOR</span> {{info.javaVendor}}</div>
         <div class="superhero-card__description"><span class="title">MODULE NAME</span> {{info.moduleName}}</div>
         <div class="superhero-card__description" style="display: flex">
-          <span class="title">MODULES CHARGES</span>
+          <span class="title">LOADED MODULES</span>
           <div class="chips">
             <span class="chip" v-for="mod in info.modules" :key="mod">{{mod}}</span>
           </div>
