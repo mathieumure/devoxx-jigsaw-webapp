@@ -82,6 +82,9 @@ export default class App extends Vue {
   .range-slider-fill {
     background-color: #00A7EB;
   }
+  .range-slider-knob {
+    border: solid;
+  }
 }
 
 .toggle-btn {
